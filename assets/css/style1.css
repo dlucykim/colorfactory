@@ -34,6 +34,142 @@
 
   }
 
+/* >>>>>>>>>>>>>>>>>> */
+
+
+.fixed {
+  visibility: visible;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 50vw;
+  height: 100vh;
+  background: #1d1e22;
+  border-left: 10px solid #333642;
+  z-index: 998;
+}
+
+#hamburger {
+  display: none;
+}
+#hamburger ~ .fixed {
+  transition: 0.2s linear;
+}
+#hamburger ~ .hamburger {
+  display: block;
+  position: fixed;
+  height: 21px;
+  width: 26px;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.2s linear;
+  top: 20px;
+  right: 20px;
+}
+#hamburger ~ .hamburger:hover {
+  transform: scale(1.1);
+}
+#hamburger ~ .hamburger span {
+  display: block;
+  position: relative;
+  top: 9px;
+  width: 26px;
+  height: 3px;
+  background-color: #B89D4F;
+  border-radius: 50px;
+  transition: 0.2s ease-in;
+}
+#hamburger ~ .hamburger span::after, #hamburger ~ .hamburger span::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  background-color: #B89D4F;
+  border-radius: 50px;
+  transition: 0.2s ease-in;
+}
+#hamburger ~ .hamburger span::before {
+  margin-top: -9px;
+}
+#hamburger ~ .hamburger span::after {
+  margin-top: 9px;
+}
+#hamburger:checked ~ .fixed {
+  right: 0px;
+}
+#hamburger:checked ~ .hamburger span {
+  background-color: rgba(0, 0, 0, 0);
+}
+#hamburger:checked ~ .hamburger span::before, #hamburger:checked ~ .hamburger span::after {
+  margin-top: 0px;
+  transition: 0.2s ease-in;
+}
+#hamburger:checked ~ .hamburger span::before {
+  transform: rotate(45deg);
+  background-color: #B89D4F;
+}
+#hamburger:checked ~ .hamburger span::after {
+  transform: rotate(-45deg);
+  background-color: #B89D4F;
+}
+#hamburger:not(:checked) ~ .hamburger:hover span::after {
+  position: absolute;
+  animation: OutInLeft 2s ease 0s 5 reverse;
+}
+#hamburger:not(:checked) ~ .hamburger:hover span::before {
+  position: absolute;
+  animation: OutInLeft 2s ease 0s 5;
+}
+@keyframes OutInLeft {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+  50% {
+    width: 0%;
+    left: 100%;
+  }
+  51% {
+    width: 0%;
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .text-center{
