@@ -78,6 +78,15 @@ a{
        
 }
 
+.plus1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    padding-bottom:30px;
+    padding-top:150px;
+}
 
 .colored{
     color:#B89D4F;
@@ -103,6 +112,7 @@ a{
 
 .bold4{
     font-weight:600;
+    
 }
 
 

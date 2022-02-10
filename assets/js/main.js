@@ -225,3 +225,15 @@ document.querySelector("#close").addEventListener
 ("click",function(){
   document.querySelector(".popup").style.display="none";
 });
+
+// >>>>>>>>>>>>
+
+function openMenu() {
+  document.getElementById("myMenu").style.height= "70%"
+}
+
+
+function closeMenu() {
+  document.getElementById("myMenu").style.height= "0%"
+}
+

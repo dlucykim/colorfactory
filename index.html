@@ -56,7 +56,7 @@
       <h2>Disclaimer</h2>
       <p> This presentation is for educational purposes only.</p>
       <!-- <a href="#" class="click1">Got It! :)</a> -->
-  </div>
+    </div>
   
     <header>
         <nav class="navi row">
@@ -72,25 +72,25 @@
             </ul>
           </div>   
           
+                
+        <div class="menu-btn">
+          <!-- <div class="xi-bars" ></div>   -->
+      <div id="myMenu" class="dropdown1">
+       <a href="javacript: void(0)" class="buttonX" onclick="closeMenu()">&times;</a>
+        <div class="dropdown-lists">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#section03">Installation </a></li>
+            <li><a href="#section04">Our Service</a></li>
+            <li><a href="#section05">+More</a></li>
+            <li><a href="#visit">Visit Us</a></li>
+          </ul>
+        </div> 
+      </div>     
+      <span class="hamburger" onclick="openMenu()">&#9776;</span>
         </nav>
-
-
-
-      <div class="menu-btn">
-          <div class="xi-bars"></div>
-          
-  <!-- HAMBURGER MENU ICON -->
-  <input type="checkbox" id="hamburger"/>
-  <label class="hamburger" for="hamburger">
-    <span></span>
-  </label>
-  
-  <!-- MENU (SIDE BAR) -->
-  <div class="fixed">
-    
-  </div>
-      </div>
-    </header>
+      
+  </header>
 
 <!-- HEADER ENDS -->
 
@@ -268,7 +268,7 @@
 <!-- SECTION04 STARTS  ---------SERVICE SERVICE SERVICE -->
 
 <section id="section04">
-        <div class="section4 plus">
+        <div class="section4 plus1">
             <h1 class="title">Ser<span class="colored">vice</span></h1>
         </div>
         
@@ -286,21 +286,22 @@
                 <li>
 
             <span class="pic">
-              <img src="assets/images/services/img52.jpg" class="only_pc" alt="">
+              <img src="assets/images/services/img52.jpg" class="only_pc" alt="이미지1">
             
             </span>
             <dl>
               <dt>'Pick a Color, Any Flavor'</dt>
               <dd>
-                <p class="bold4">by Mille Feuille</p><br>전시품을 둘러보면서
+                  <p class="bold4">by Mille Feuille</p><br>전시품을 둘러보면서
                   Mille Feuille Bakery에서 만든 무지개 마카롱  즐기실수 있습니다.
+                
               </dd>
             </dl>
           </li>
 
             <li>
             <span class="pic">
-              <img src="assets/images/services/image101-6.jpg" class="only_pc" alt="">
+              <img src="assets/images/services/image101-6.jpg" class="only_pc" alt="이미지2">
             
             </span>
             <dl>
@@ -315,7 +316,7 @@
 
           <li>
             <span class="pic">
-              <img src="assets/images/services/gummy-6.jpg" class="only_pc" alt="">
+              <img src="assets/images/services/gummy-6.jpg" class="only_pc" alt="이미지3">
             </span>
             <dl>
               <dt>'Complementary Compliments'</dt>
@@ -330,7 +331,7 @@
 
         <li>
          <span class="pic">
-            <img src="assets/images/services/image100.png" class="only_pc" alt="">
+            <img src="assets/images/services/image100.png" class="only_pc" alt="이미지4">
           
           </span>
           <dl>
@@ -344,7 +345,7 @@
 
         <li>
           <span class="pic">
-            <img src="assets/images/services/shop1.jpg" class="only_pc" alt="">
+            <img src="assets/images/services/shop1.jpg" class="only_pc" alt="이미지5">
         
           </span>
           <dl>
@@ -365,62 +366,71 @@
 <!-- MOBILE SERVICE ------------------------------------->
 
 
-<div class="contentmobile">
+ <div class="contentmobile">
 
-  <div class="grid fisrt">
-    <figure class="effect-serv pad50 largura">
-      <img src="assets/images/services/img52-mobile1.png"  alt="이미지" width="450" height="350">
+  <div class="grid largura">
+    <figure class="effect-serv">
+      <img src="assets/images/services/img52-mobile1.png"  alt="서비스이미지">
       
       <figcaption>
         <div>
-           <h2>'Pick a Color, Any Flavor'</h2>
-           <p>by by Mille Feuille</p><br>
-           <p>전시품을 둘러보면서 Mille Feuille Bakery에서<br>
-            만든 무지개 마카롱  즐기실수 있습니다.</p>
+          
+             <div class="backg">
+             
+                <h2 class="">'Pick a Color, Any Flavor'</h2>
+                <p>by by Mille Feuille</p>
+                <p>전시품을 둘러보면서 Mille Feuille Bakery에서
+                  만든 무지개 마카롱  즐기실수 있습니다.</p>
+            </div>  
        </div>
       </figcaption>			
     </figure>
       
-      <figure class="effect-serv largura">
-        <img src="assets/images/services/image101-mobie.jpg" alt="서비스이미지"  width="450" height="350">
+      <figure class="effect-serv">
+        <img src="assets/images/services/image101-mobie.jpg" alt="서비스이미지" >
         <figcaption>
           <div>
+            <div class="backg">
             <h2>'Blue Marble'</h2>
             <p>(Into the Blue)</p>
-            <p>파란색 테마의는 500,000개의플라스틱 공이 있는 
-              <br>파란색 "수영장"방입니다.맛있는 
-              <br>디저트와 사진을 찍을수 있는 공간입니다.</p>
+            <p>파란색 테마의는 500,000개의플라스틱 공이 있는 파란색 "수영장" 방입니다.맛있는 
+            디저트와 사진을 찍을수 있는 공간입니다.</p>
+          </div>
           </div>
         </figcaption>			
       </figure>
-  </div>
+  </div> 
 
 <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>Second Container w/3 pics  -->
 
 
   <div class="content second">
 
-    <div class="grid fig">
-      <figure class="effect-serv ">
-        <img src="assets/images/services/gummy-560.jpg" class="altura m20" alt="서비스이미지"/>
+    <div class="grid left">
+
+
+      <figure class="effect-serv">
+        <img src="assets/images/services/gummy-560.jpg"  class="altura " alt="서비스이미지"/>
         <figcaption>
           <div >
+            <div class="backg">
             <h2>'Complementary Comp..'</h2>
-            <p>by Christine Wong Yap</p><br>
-            <p>간단한 심리테스트 후 달콤한 <br>
-               캔디와 젤리도 맛 보세요!</p>
+            <p>by Christine Wong Yap</p>
+            <p>간단한 심리테스트 후 달콤한 캔디와 젤리도 맛 보세요!</p>
+          </div>
           </div>
         </figcaption>	
       </figure>
 
-      <figure class="effect-serv none1 ">
+      <figure class="effect-serv">
         <img src="assets/images/services/image400.png" class="altura" alt="서비스이미지"/>
         <figcaption>
           <div>
-            <h2>'Color Wheels'</h2>
-            <p>by Andrew Kuo</p><br>
-             <p>빙글빙글 돌고 있는 이 디스크 위에<br> 기분 좋게 쌓이고 위의 
-              카메라를 위해 <br>포즈를 취합니다.
+            <div class="backg">
+            <h2>'Color Wheels'</h2>      
+            <p>by Andrew Kuo</p>
+             <p>빙글빙글 돌고 있는 이 디스크 위에 기분 좋게 쌓이고 위의 
+              카메라를 위해 포즈를 취합니다.</p>
           </div>
           
         </figcaption>			
@@ -430,9 +440,11 @@
         <img src="assets/images/services/shop1-560.jpg" class="altura none1" alt="서비스이미지"/>
         <figcaption>
           <div>
-            <h2>ColorShop</h2>
-            <p>(Giftshop)</p>
-            <p>We make colorful gifts too!</p>
+            <div class="backg">
+              <h2>ColorShop</h2>
+              <p>(Giftshop)</p>
+              <p>We make colorful gifts too!</p>
+            </div>
           </div>
         </figcaption>			
       </figure>  
@@ -462,8 +474,7 @@
 
         <p class="garden-text">어퍼 이스트 사이드의  위치한 The Cooper Hewitt Museum 에서 
           "Manhatta Color Walk"라는 새로운 설치를 출시했습니다.
-          아티스트들은 
-          맨해튼 주변의 265개 거리에서 영감을  받고 설치 하였습니다.
+          아티스트들은 맨해튼 주변의 265개 거리에서 영감을  받고 설치 하였습니다.
         </p>
       </div>
       

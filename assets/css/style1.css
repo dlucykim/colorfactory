@@ -33,145 +33,7 @@
       margin:20px 0;
 
   }
-
-/* >>>>>>>>>>>>>>>>>> */
-
-
-.fixed {
-  visibility: visible;
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: -100vw;
-  width: 50vw;
-  height: 100vh;
-  background: #1d1e22;
-  border-left: 10px solid #333642;
-  z-index: 998;
-}
-
-#hamburger {
-  display: none;
-}
-#hamburger ~ .fixed {
-  transition: 0.2s linear;
-}
-#hamburger ~ .hamburger {
-  display: block;
-  position: fixed;
-  height: 21px;
-  width: 26px;
-  cursor: pointer;
-  z-index: 999;
-  transition: 0.2s linear;
-  top: 20px;
-  right: 20px;
-}
-#hamburger ~ .hamburger:hover {
-  transform: scale(1.1);
-}
-#hamburger ~ .hamburger span {
-  display: block;
-  position: relative;
-  top: 9px;
-  width: 26px;
-  height: 3px;
-  background-color: #B89D4F;
-  border-radius: 50px;
-  transition: 0.2s ease-in;
-}
-#hamburger ~ .hamburger span::after, #hamburger ~ .hamburger span::before {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 3px;
-  background-color: #B89D4F;
-  border-radius: 50px;
-  transition: 0.2s ease-in;
-}
-#hamburger ~ .hamburger span::before {
-  margin-top: -9px;
-}
-#hamburger ~ .hamburger span::after {
-  margin-top: 9px;
-}
-#hamburger:checked ~ .fixed {
-  right: 0px;
-}
-#hamburger:checked ~ .hamburger span {
-  background-color: rgba(0, 0, 0, 0);
-}
-#hamburger:checked ~ .hamburger span::before, #hamburger:checked ~ .hamburger span::after {
-  margin-top: 0px;
-  transition: 0.2s ease-in;
-}
-#hamburger:checked ~ .hamburger span::before {
-  transform: rotate(45deg);
-  background-color: #B89D4F;
-}
-#hamburger:checked ~ .hamburger span::after {
-  transform: rotate(-45deg);
-  background-color: #B89D4F;
-}
-#hamburger:not(:checked) ~ .hamburger:hover span::after {
-  position: absolute;
-  animation: OutInLeft 2s ease 0s 5 reverse;
-}
-#hamburger:not(:checked) ~ .hamburger:hover span::before {
-  position: absolute;
-  animation: OutInLeft 2s ease 0s 5;
-}
-@keyframes OutInLeft {
-  0% {
-    width: 100%;
-    left: 0;
-  }
-  50% {
-    width: 0%;
-    left: 100%;
-  }
-  51% {
-    width: 0%;
-    left: 0;
-  }
-  100% {
-    width: 100%;
-    left: 0;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .text-center{
   text-align: center;
 }
@@ -201,10 +63,10 @@ header{
 .navi{
  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 98%;
-  margin:0 auto;
+  /* margin:0 auto; */
   padding:20px;
   
 }
@@ -213,15 +75,64 @@ header{
   margin: 10px 20px;
 }
 
-
-
 .xi-bars{
-  font-size: 40px;
+   font-size: 40px;
   color:#B89D4F;
-   margin:30px;
+  margin:30px;
   display:none;
 }
- 
+/* >>>>>>>>>> */
+.menu-btn{
+  display: none;
+}
+.dropdown1{
+  height:0%;
+  width:30%;
+  position:fixed;
+  z-index: 1;
+  top:-1%;
+  right:0;
+  background-color:#ffffff;
+  overflow-y:hidden;
+  transition: 0.5s;
+  box-shadow:0px 1px 1px 1px lightgray;
+}
+
+.dropdown-lists{
+  position: relative;
+  top:25%;
+  width:100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dropdown1 a{
+  padding: 8px;
+  font-size: 25px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+.dropdown1 a:hover, .dropdown1 a:focus{
+  color:#B89D4F;
+}
+
+.hamburger{
+  color:#B89D4F;
+  right:10px;
+  top:20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.dropdown1 .buttonX{
+ top:20px;
+ right:40px;
+ font-size: 50px;
+ color:#B89D4F; 
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .pop-bold1 li a {
   position: relative;
   z-index: 1;
@@ -580,26 +491,25 @@ header{
 
 /* //SECTION4 STARTS */
 
-
 .topcontainer{
  width:99.9%;
- height:60vh;
+ height:40vh;
  position:relative;
  overflow: hidden;
  margin:0 auto;
-  
-}
+padding-bottom: 50px;
+} 
 
 
 .half{
   background-color: #f1f1f1;
-  height:55% ;
+  height:60% ;
   position:absolute;
   bottom:0;
   width:100%;
- 
   display: flex;
   z-index:-1;
+ 
  
 }
 
@@ -613,7 +523,7 @@ width:80%;
   display: table-cell;
   vertical-align: middle;
   width: 90%;
-  height: 45%;
+  height: 50%;
 }
 
 fieldset, dl, dd, dt, img {
@@ -638,13 +548,12 @@ fieldset, dl, dd, dt, img {
 
 .area04{
   max-width:1900px;
-  height: 100px;
-
+   height: 100px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:50px;
+  padding:40px;
 }
 .pic img {
 
@@ -714,8 +623,8 @@ dl{
   /* animation-timing-function: ease-in-out; */
   margin-left: 30px;
   margin-top: 5px;
-  height: 100px; 
-  width: 100px;
+  height: 80px; 
+  /* width: 100px; */
 }
 
 @keyframes floating {
@@ -747,10 +656,11 @@ dl{
 
 
 /* TEXT */
+
 #hello-world {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  width: 20%;
+  /* margin-top: 50px;
+  margin-bottom: 20px; */
+  width: 50%;
   text-align: justify;
   
 } 
@@ -760,10 +670,11 @@ dl{
   background-size:cover;
   background-repeat: no-repeat;
   width:30%;
-  height:500px;
+  height:400px;
   z-index: 0;
   margin-top: 80px;
   margin-bottom:80px;
+  border-radius: 60px;
 
 }
 .area06{
@@ -816,14 +727,14 @@ dl{
 
 .garden-text{
   margin: 10px 0;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: white!important;
   font-weight: lighter;
 }
 
 
 .box {
-  padding: 40px 50px;
+  padding: 100px 50px;
   border-radius: 60px;
   text-align: left;
 }
@@ -1020,14 +931,10 @@ box-shadow: 0 0 27px -13px #000;
   display:none;
 }  
 
-.pad50{
-  padding-left:50px;
-}
-
 .grid {
 	position: relative;
   text-align: center;
-  height: 400px;
+  margin: 0 auto;
   padding-left: 20px;
 }
 
@@ -1035,7 +942,7 @@ box-shadow: 0 0 27px -13px #000;
   position: relative;
 	float: left;
 	overflow: hidden;
-	margin: 10px 1%;
+	margin:10px 1%;
   min-width: 320px;
   max-height: 350px; 
 	text-align: center;
@@ -1049,7 +956,7 @@ box-shadow: 0 0 27px -13px #000;
   float: left;
   overflow: hidden;
   width:97.5%;
-  max-height: 400px;
+  max-height: 350px;
   text-align: center;
   cursor: pointer;
   display: flex;
@@ -1127,17 +1034,17 @@ figure.effect-serv img {
   transform: translate3d(-40px,0,0);
 }
 
-figure.effect-serv figcaption {
+/* figure.effect-serv figcaption {
 	text-align: right;
-}
+} */
 
 figure.effect-serv figcaption > div {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	padding: 1rem;
-	width: 60%;
-	height: 30%;
+	padding: 20px;
+	width: 65%;
+	height: 35%;
 } 
 
  figure.effect-serv h2,
@@ -1344,6 +1251,26 @@ margin-left: 15px;
  .container06 {
   height: 50vh;
  }
+ .backg:hover{
+  text-align: center; 
+  width:100%;
+  height:70%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.377);  
+  padding:10px;
+  }
+  .box {
+    padding: 80px 50px;
+  }
+
+ .largura{
+display: grid;
+grid-auto-flow: column;
+grid-auto-columns: 50%;
+gap: 10px;
+align-content: space-evenly;
+ }
+ 
 }  
 
 @media(max-width:1000px){
@@ -1364,11 +1291,14 @@ margin-left: 15px;
   .section02-text {
     width: 80%;
     display: flex;
-   
     gap: 20px;
     padding: 50px;
   }
+
+  .box {
+    padding: 65px 50px;
 } 
+}
 
 @media(max-width:980px){
 
@@ -1387,19 +1317,12 @@ margin-left: 15px;
  .grid figure figcaption, .grid figure figcaption > a{
 width: 100%;
  }
- .pad50{
-  padding-left:0px;
- }
+ 
  .container {
   width: 90%;
  }
- .largura{
-  width:100%;
-  height:380px;
-  width:400px;
 
- }
- 
+
 }
 @media(max-width:900px){
 
@@ -1413,65 +1336,43 @@ width: 100%;
   .grid{
     margin-left:6px;
   }
- .grid .first{
-   width:100%;
-   height:100%;
-  display: flex;
 
- 
- }
-
- .largura{
-   width:750px;
-   height:fit-content;
-  
+  .largura{
+    width:95%;
+    height:fit-content;
+    margin: 0 auto;
   }
-
- .largura img{
-   width:100%;
-   height:80%;
-   object-fit: cover;
-
- }
- .section02-text {
+  
+  .backg{
+    height: fit-content;
+  }
+  .section02-text {
   width: 100%;
  }
- /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
- 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
  .second{
   display:flex;
+  flex-direction:columns; 
   width:100%;
-  height:100%;
- }
 
-  .fig{
-   flex-direction: column;
-   width:100%;
-   height:500px;
-  
- }
- .grid figure img{
-  height:500px;
-  max-width: 100%;
-  object-fit: fill;
- }
-
- .none1{
-  display:none;
- }
+}
+.left{
+  margin-left:90px;
+}
  
 }
 
  @media(max-width:768px) {
+  
+
 
    .pop-bold1 {
     display: none;
   }
-  .row{
+  /* .row{
     flex-direction: column;
     align-items: flex-start;
-  }
+  } */
   .section01-text{
     width: 100%;
   }
@@ -1487,16 +1388,14 @@ width: 100%;
     width: 80%;
     align-items: center;
   }
-  .xi-bars{
-    display: block;
-    font-size: 40px;
-  }
+ 
   .largura{
-    margin-left:30px;
+    margin:20px;
   }
 
 figure.effect-serv figcaption > div{
-  height: 55%;
+  height: 60%;
+  
 }
 .altura{
   width:100%;
